@@ -8,7 +8,7 @@ function MenuBar() {
 	const path = pathname === '/' ? 'home' : pathname.substr(1);
 	const [activeItem, setactiveItem] = useState(path);
 	const context = useContext(AuthContext);
-	const { user, logout, login } = context;
+	const { user } = context;
 
 
 	const handleItemClick = (e, { name }) => setactiveItem(name);

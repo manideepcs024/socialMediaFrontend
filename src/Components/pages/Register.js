@@ -17,6 +17,7 @@ export default function Register(props) {
 	})
 	const [addUser, { loading }] = useMutation(REGISTER_USER, {
 		update(proxy, result) {
+			console.log(result);
 			context.login(result.data.login)
 			props.history.push('/');
 		},

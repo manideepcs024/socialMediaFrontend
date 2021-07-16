@@ -6,6 +6,7 @@ const initialState = {
 }
 
 if(localStorage.getItem("jwtToken")){
+	console.log("i am called... ");
 	let token = localStorage.getItem("jwtToken");
 	token = jwtDecode(token);
 	console.log(token);
@@ -41,6 +42,7 @@ function authReducer(state, action) {
 function AuthProvider(props) {
 	const [state, dispatch] = useReducer(authReducer, initialState);
 	function login(userData) {
+		console.log("aaa", userData);
 		localStorage.setItem("jwtToken",userData.token)
 		dispatch({
 			type: 'LOGIN',

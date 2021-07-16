@@ -4,7 +4,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from '@ap
 import { setContext } from 'apollo-link-context';
 
 const httpClient = createHttpLink({
-	uri: 'http://localhost:4000'
+	uri: 'https://serversocialmediamerng.herokuapp.com/'
 })
 
 const authLink = setContext((req,pre)=>{

@@ -3,12 +3,8 @@ import { Button, Confirm, Icon } from 'semantic-ui-react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
 import { FETCH_POST_QUERY } from '../utils/graphql';
-import { useHistory } from 'react-router-dom';
-
-
 
 function DeleteButton(props) {
-	const history = useHistory();
 	const [confirmOpen, setConfirmOpen] = useState(false);
 	const mutation = props.commentId ? DELETE_COMMENT_MUTATION : DELETE_POST_MUTATION;
 	const [deletePost] = useMutation(mutation, {

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import gql from 'graphql-tag';
-import { useHistory } from 'react-router';
 import { useMutation, useQuery } from '@apollo/client';
 import { Grid, Image, Card, Button, Label, Icon, Form } from 'semantic-ui-react';
 import moment from 'moment';
@@ -9,7 +8,6 @@ import { AuthContext } from '../../context/auth';
 import DeleteButton from '../DeleteButton';
 
 const SinglePost = (props) => {
-	const history = useHistory();
 	const [comment, setComment] = useState('');
 	const context = useContext(AuthContext);
 	const { user } = context;

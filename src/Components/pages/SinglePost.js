@@ -23,7 +23,7 @@ const SinglePost = (props) => {
 	const [dataSubmit] = useMutation(SUBMIT_COMMENT_MUTATION, {
 		update() {
 			setComment('');
-			history.go(1);
+			// history.go(1);
 
 		},
 		variables: {

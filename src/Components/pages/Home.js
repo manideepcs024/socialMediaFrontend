@@ -14,7 +14,7 @@ export default function Home() {
 	const { user } = context;
 	return (
 
-		<Grid columns={3} divided>
+		<Grid columns={3}>
 			<Grid.Column className="page-title">
 				<h1>Recent Posts</h1>
 			</Grid.Column>
@@ -33,9 +33,6 @@ export default function Home() {
 					) : (
 						<Transition.Group
 							duration={200}
-							divided
-							size='huge'
-							verticalAlign='middle'
 						>{
 								data && data.getPosts.map(post => {
 									return (

@@ -22,7 +22,8 @@ function DeleteButton(props) {
 				newPosts = newPosts.filter(p => p.id !== props.id);
 				proxy.writeQuery({ query: FETCH_POST_QUERY, data: { getPosts: newPosts } });
 			} else {
-				history.go(1);
+				console.log("delete button");
+				history.go(0);
 
 			}
 			setConfirmOpen(false);
